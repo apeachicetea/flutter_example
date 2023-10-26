@@ -2,38 +2,38 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: HomeWidget()
-  ));
+    home: Body()
+  );
 }
 
-class HomeWidget extends StatelessWidget {
-  const HomeWidget({super.key});
+class Body extends StatelessWidget {
+  const Body({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
-      body: ConstraintsWidget(),
-    ));
+    return const Placeholder();
   }
 }
 
-class ConstraintsWidget extends StatelessWidget {
-  const ConstraintsWidget({super.key});
+class Example extends StatefulWidget {
+  const Example({super.key});
+
+  late int index;
+
+  @override
+  void initState() {
+    super.initState();
+    index = 5;
+  }
+}
+
+class _ExampleState extends State<Example> {
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 500,
-      width: 500,
-      color: Colors.blue,
-      child: Center(
-        child: Container(
-          constraints: BoxConstraints.tight(Size(200, 200)),
-          width: 300,
-          height: 300,
-          color: Colors.red,
-        ),
-      )
-    );
+    return const Placeholder();
   }
 }
+
+
